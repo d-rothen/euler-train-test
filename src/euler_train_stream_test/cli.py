@@ -14,7 +14,12 @@ from typing import Any
 import numpy as np
 
 import euler_train
-from . import __version__
+
+try:
+    from . import __version__
+except ImportError:
+    __version__ = "0.1.0"
+
 
 
 METRIC_NAMING: dict[str, Any] = {
